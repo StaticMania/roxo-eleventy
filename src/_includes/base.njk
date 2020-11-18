@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="zxx">
+  <head>
+    <meta charset="utf-8" />
+    <title> {{title}} </title>
+
+    <!-- mobile responsive meta -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1"
+    />
+
+    <!-- Slick Carousel -->
+    <link rel="stylesheet" href="/assets/plugins/slick/slick.css" />
+    <link rel="stylesheet" href="/assets/plugins/slick/slick-theme.css" />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="/assets/plugins/font-awesome/css/font-awesome.min.css"
+    />
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="/assets/plugins/bootstrap/bootstrap.min.css" />
+    <!-- Stylesheets -->
+    <link href="/assets/css/style.css" rel="stylesheet" />
+
+    <!--Favicon-->
+    <link rel="shortcut icon" href="/assets/images/favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="/assets/images/favicon.png" type="image/x-icon" />
+
+  </head>
+
+  <body>
+
+<nav class="navbar navbar-expand-lg site-navigation">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <img src="/assets/images/logo.png" alt="logo" />
+    </a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-toggle="collapse"
+      data-target="#sitenavbar"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="sitenavbar">
+      <ul class="navbar-nav ml-auto main-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="/">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/about">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/portfolio">Portfolio</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Blog</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link btn btn-sm btn-primary btn-sm-rounded" href="/contact">
+            <span class="btn-area">
+              <span data-text="Get in touch">
+                Get in touch
+              </span>
+            </span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  {% block process %}
+
+    {{ content | safe }}
+    
+  {% endblock %}
+
+
+  {% block workTogether %}
+
+  <section class="site-cta">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 text-center">
+          <h1 class="site-cta-title">LET’S WORK TOGETHER</h1>
+          <ul class="site-cta-buttons">
+            <li>
+              <a href="/contact" class="btn btn-secondary">
+                <span class="btn-area">
+                  <span data-text="Submit Query"> Submit Query </span>
+                </span>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="btn btn-primary">
+                <span class="btn-area">
+                  <span data-text="Not Convinced"> Not Convinced </span>
+                </span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+      
+  {% endblock %}
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="site-footer-logo"><img src="/assets/images/logo-footer.png" alt="logo-footer"></div>
+      </div>
+      <div class="col-lg-3">
+        <div class="site-footer-widget">
+          <h5 class="site-footer-widget-title">Contact Info</h5>
+          <p class="site-footer-widget-description">
+            713 Elmwood St.
+            <br>
+            Prior Lake, MN 55372
+            <br>
+            <a href="tel:409-896-1444">409-896-1444</a>, <a href="tel:409-781-1308">409-781-1308</a>
+            <br>
+            <a href="mailto:">info@roxo.co</a>
+          </p>
+        </div>
+      </div>
+      <div class="col-lg-2">
+        <div class="site-footer-widget">
+          <h5 class="site-footer-widget-title">Sitemap</h5>
+          <ul class="site-footer-widget-links">
+            <li><a href="#">About Comapny</a></li>
+            <li><a href="#">Projects</a></li>
+            <li><a href="#">Design Process</a></li>
+            <li><a href="/contact">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-lg-2">
+        <div class="site-footer-widget">
+          <h5 class="site-footer-widget-title">Social Media</h5>
+          <ul class="site-footer-widget-links">
+            <li><a href="#">Medium</a></li>
+            <li><a href="#">Behance</a></li>
+            <li><a href="#">Dribbble</a></li>
+            <li><a href="#">Instagram</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-lg-3">
+        <div class="site-footer-widget">
+          <h5 class="site-footer-widget-title">We help brands:</h5>
+          <p class="site-footer-widget-description">
+            develop design solutions
+            <br>
+            produce valuable cultural content
+            <br>
+            create fresh brand experience
+          </p>
+        </div>
+      </div>
+      <div class="col-lg-2">
+        <a href="#top" class="site-footer-widget-top">
+          <img src="/assets/images/to-top.svg" alt="back-to-top">
+          <p>
+            I want to 
+            <br>
+            visit again
+          </p>
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="/assets/js/vendor.js"></script>
+<script src="/assets/js/script.js"></script>
+</body>
+</html>

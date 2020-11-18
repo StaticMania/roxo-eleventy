@@ -1,0 +1,68 @@
+{% extends "simplePortfolio.njk" %}
+
+{% block titleText %}
+<section class="site-project-header">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-lg-8">
+        <div class="site-project-header-content">
+          <h1>
+            {{ titleTop }} <span> {{ titleTop2 }} </span> {{ titleTop3 }} <span> {{ titleTop4 }} </span>
+          </h1>
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <a href="#project" class="site-project-header-action scroll-to">
+          <span> {{ arrowText }} </span>
+          <img src="{{ arrowImage }}" alt="arrow-down" />
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}
+
+{% block Posts %}
+<section class="site-project" id="project">
+  <div class="container">
+    <div class="row">
+    {% for item in collections.portfolioPosts %}
+       <div class="col-lg-6">
+        <div class="site-project-item">
+          <div class="site-project-item-thumb">
+            <img
+              src= "{{ item.data.backgroundImage }}"
+              alt="{{ item.data.title }}"
+            />
+          </div>
+          <div class="site-project-item-content">
+            <span> {{ item.data.productType }} </span>
+            <h3> {{ item.data.title }} </h3>
+            <a href=" {{ item.url }} ">view project</a>
+          </div>
+        </div>
+      </div> 
+    {% endfor %}
+
+      <div class="col-12">
+        <div class="site-project-pagination">
+          <nav>
+            <ul class="pagination">
+              <li class="page-item active">
+                <a class="page-link" href="#">1</a>
+              </li>
+              <li class="page-item"><a class="page-link" href="#">2</a></li>
+              <li class="page-item"><a class="page-link" href="#">3</a></li>
+              <li class="page-item"><a class="page-link" href="#">Next</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}
+
+
+
+
