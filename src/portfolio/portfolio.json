@@ -1,3 +1,4 @@
 {
-    "tags": "portfolioPosts"
+  "layout":"layouts/projectSingle",
+  "tags":"portfolios"
 }

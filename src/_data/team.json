@@ -1,0 +1,119 @@
+{
+  "title": "team that makes the difference.",
+  "teamMembers":[
+    {
+      "name": "PABLO ESCOBAR",
+      "dig": "Creative Director",
+      "img": "/assets/images/team/team-member-one.jpg",
+      "social":[
+        {
+          "icon": "medium",
+          "link": "#"
+        },
+        {
+          "icon": "linkedin",
+          "link": "#"
+        },
+        {
+          "icon": "instagram",
+          "link": "#"
+        }
+      ]
+    },
+    {
+      "name": "MONTINO RIAU",
+      "dig": "Product Manager",
+      "img": "/assets/images/team/team-member-two.jpg",
+      "social":[
+        {
+          "icon": "medium",
+          "link": "#"
+        },
+        {
+          "icon": "linkedin",
+          "link": "#"
+        },
+        {
+          "icon": "instagram",
+          "link": "#"
+        }
+      ]
+    },
+    {
+      "name": "ALEX NAASRI",
+      "dig": "Chief Design Officer",
+      "img": "/assets/images/team/team-member-three.jpg",
+      "social":[
+        {
+          "icon": "medium",
+          "link": "#"
+        },
+        {
+          "icon": "linkedin",
+          "link": "#"
+        },
+        {
+          "icon": "instagram",
+          "link": "#"
+        }
+      ]
+    },
+    {
+      "name": "HONGMAN CHIOA",
+      "dig": "UX Researcher",
+      "img": "/assets/images/team/team-member-four.jpg",
+      "social":[
+        {
+          "icon": "medium",
+          "link": "#"
+        },
+        {
+          "icon": "linkedin",
+          "link": "#"
+        },
+        {
+          "icon": "instagram",
+          "link": "#"
+        }
+      ]
+    },
+    {
+      "name": "SANTIO ANDRESS",
+      "dig": "Content Researcher",
+      "img": "/assets/images/team/team-member-five.jpg",
+      "social":[
+        {
+          "icon": "medium",
+          "link": "#"
+        },
+        {
+          "icon": "linkedin",
+          "link": "#"
+        },
+        {
+          "icon": "instagram",
+          "link": "#"
+        }
+      ]
+    },
+    {
+      "name": "RAMESH PAUL",
+      "dig": "Creative Designer",
+      "img": "/assets/images/team/team-member-six.jpg",
+      "social":[
+        {
+          "icon": "medium",
+          "link": "#"
+        },
+        {
+          "icon": "linkedin",
+          "link": "#"
+        },
+        {
+          "icon": "instagram",
+          "link": "#"
+        }
+      ]
+    }
+  ]
+}

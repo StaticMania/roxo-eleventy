@@ -1,0 +1,56 @@
+{% extends "base.njk" %}
+
+{% block content %}
+    <section class="site-project-header">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-8">
+            <div class="site-project-header-content">
+              <h1>
+                {{ content | safe}}
+              </h1>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <a href="#project" class="site-project-header-action scroll-to">
+              <span>Scroll Down</span>
+              <img src="/assets/images/arrow-down.svg" alt="arrow-down">
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="site-project" id="project">
+        <div class="container">
+          <div class="row">
+            {% for portfolio in collections.portfolios %}
+            <div class="col-lg-6 col-md-10 mx-auto">
+              <div class="site-project-item">
+                <div class="site-project-item-thumb">
+                  <img src="{{portfolio.data.img}}" alt="project-thumb">
+                </div>
+                <div class="site-project-item-content">
+                  <span>{{portfolio.data.subTitle}}</span>
+                  <h3>{{portfolio.data.title}}</h3>
+                  <a href="{{portfolio.data.page.url}}" class="read-more">{{portfolio.data.linkText}}</a>
+                </div>
+              </div>
+            </div>
+            {% endfor %}
+            <div class="col-12">
+              <div class="site-project-pagination">
+                <nav>
+                  <ul class="pagination">
+                    <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                  </ul>
+                </nav>
+              </div>
+            </div>
+          </div>
+        </div>
+    </section>
+{% endblock %}

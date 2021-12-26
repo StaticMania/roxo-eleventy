@@ -1,0 +1,42 @@
+{
+  "title": "OPINION FROM REAL PEOPLE",
+  "des": "What clients says about our services.",
+  "opinion":[
+    {
+      "name": "Simonns Hodge",
+      "dig": "CEO, Credito",
+      "img": "/assets/images/testimonial/user-thumb-one.jpg",
+      "comment": "Trust us we looked for a very long time and wasted thousands of dollars testing other teams, freelancers, and outsource companies."
+    },
+    {
+      "name": "Rekon Montino",
+      "dig": "CDO, Bulmuci",
+      "img": "/assets/images/testimonial/user-thumb-two.jpg",
+      "comment": "Roxo products have allowed us to deliver better support to all our clients. The agility with which we can implement new features and workflows is a key element."
+    },
+    {
+      "name": "Ryan Hillary",
+      "dig": "MD, Udilamo",
+      "img": "/assets/images/testimonial/user-thumb-three.jpg",
+      "comment": "We’re a really busy restaurant, and roxo gives our customers a easy way to order, pay, and pick up their food so they can beat the line and beat that lunch rush."
+    },
+    {
+      "name": "Dockrel Kahn",
+      "dig": "PM, Walmet",
+      "img": "/assets/images/testimonial/user-thumb-four.jpg",
+      "comment": "Trust us we looked for a very long time and wasted thousands of dollars testing other teams, freelancers, and outsource companies."
+    },
+    {
+      "name": "Orino Monteno",
+      "dig": "CEO, Axion",
+      "img": "/assets/images/testimonial/user-thumb-five.jpg",
+      "comment": "Roxo products have allowed us to deliver better support to all our clients. The agility with which we can implement new features and workflows is a key element."
+    },
+    {
+      "name": "Welfo Roy",
+      "dig": "PDO, Komoyo",
+      "img": "/assets/images/testimonial/user-thumb-six.jpg",
+      "comment": "We’re a really busy restaurant, and roxo gives our customers a easy way to order, pay, and pick up their food so they can beat the line and beat that lunch rush."
+    }
+  ]
+}

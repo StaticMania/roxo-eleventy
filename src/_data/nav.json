@@ -1,0 +1,6 @@
+{
+  "navLogo":"/assets/images/logo.png",
+  "navLinks":["home","about","portfolio","blog"],
+  "navBtnLink":"contact",
+  "navBtnText":"Get in touch"
+}

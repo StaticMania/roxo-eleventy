@@ -1,0 +1,130 @@
+{% extends "base.njk" %}
+
+{% block content %}
+
+    <section class="site-hero">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-10 mx-auto">
+            <div class="site-hero-content text-center">
+              <h6>{{hero.subTitle}}</h6>
+              <h1>
+                {{hero.title.firstPara}}
+                <br>
+                {{hero.title.secondPara}}
+              </h1>
+              <ul class="site-hero-content-buttons">
+                <li>
+                  <a href="{{hero.seeWorkBtn.link}}" class="btn btn-secondary scroll-to">
+                    <span class="btn-area">
+                      <span data-text="{{hero.seeWorkBtn.text}}">
+                        {{hero.seeWorkBtn.text}}
+                      </span>
+                    </span>
+                  </a>
+                </li>
+                <li>
+                  <a href="/{{hero.connectBtn.link}}" class="btn btn-primary">
+                    <span class="btn-area">
+                      <span data-text="{{hero.connectBtn.text}}">
+                        {{hero.connectBtn.text}}
+                      </span>
+                    </span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <a href="#counter" class="site-hero-scroll scroll-to">
+        <img src="/assets/images/arrow-down.svg" alt="arrow-down">
+      </a>
+    </section>
+
+    <section class="site-counter" id="counter">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="section-title">
+              <h2 class="text-white">{{achieve.title}}</h2>
+            </div>
+          </div>
+          {% for achievement in achieve.achievements %}
+          <div class="col-lg-3 col-md-6">
+            <div class="site-counter-item">
+              <span class="site-counter-item-title">{{achievement.title}}</span>
+              <h3 class="site-counter-item-number">{{achievement.counter}}+</h3>
+            </div>
+          </div> 
+          {% endfor %}
+        </div>
+      </div>
+    </section>
+
+    <section class="site-project" id="project">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="section-title">
+              <h2>{{portfolio.subTitle}}</h2>
+              <p>{{portfolio.title}}</p>
+            </div>
+          </div>
+          {% for portfolio in collections.portfolios %}
+          <div class="col-lg-6 col-md-10 mx-auto">
+            <div class="site-project-item">
+              <div class="site-project-item-thumb">
+                <img src="{{portfolio.data.img}}" alt="project-thumb">
+              </div>
+              <div class="site-project-item-content">
+                <span>{{portfolio.data.subTitle}}</span>
+                <h3>{{portfolio.data.title}}</h3>
+                <a href="{{portfolio.data.page.url}}" class="read-more">{{portfolio.data.linkText}}</a>
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+          <div class="col-12 text-center text-lg-left">
+            <a href="/{{portfolio.seeAllbtn.link}}" class="site-project-cta">{{portfolio.seeAllbtn.text}}</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="site-testimonial">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="section-title">
+              <h2>
+                {{testimonials.title}}
+              </h2>
+              <p>
+                {{testimonials.des}} 
+              </p>
+            </div>
+          </div>
+          {% for opinion in testimonials.opinion %}
+          <div class="col-lg-4 col-md-6">
+            <div class="site-testimonial-item">
+              <div class="site-testimonial-item-header">
+                <div class="thumb">
+                  <img src="{{opinion.img}}" alt="user-thumb">
+                </div>
+                <div class="person">
+                  <h5>{{opinion.name}}</h5>
+                  <p>{{opinion.dig}}</p>
+                </div>
+              </div>
+              <p class="site-testimonial-item-body">
+                {{opinion.comment}}
+              </p>
+            </div>
+          </div> 
+          {% endfor %}
+        </div>
+      </div>
+    </section>
+  
+{% endblock %}

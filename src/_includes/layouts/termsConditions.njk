@@ -1,0 +1,20 @@
+{% extends "base.njk" %}
+
+{% block content %}
+    <section class="site-project-single-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 mx-auto">
+            <div class="site-project-single">
+              <h1>
+                {{title}}
+              </h1>
+              <div class="site-project-single-description">
+                {{content | safe}}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+{% endblock %}

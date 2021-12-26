@@ -2,7 +2,10 @@
 <html lang="zxx">
   <head>
     <meta charset="utf-8" />
-    <title> {{title}} </title>
+    <title>Roxo | Creative Design Agency</title>
+
+    <!--Meta For No Index-->
+    <meta name="robots" content="noindex, Nofollow, Noimageindex">
 
     <!-- mobile responsive meta -->
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -12,174 +15,174 @@
     />
 
     <!-- Slick Carousel -->
-    <link rel="stylesheet" href="/assets/plugins/slick/slick.css" />
-    <link rel="stylesheet" href="/assets/plugins/slick/slick-theme.css" />
+    <link rel="stylesheet" href="/assets/vendor/slick/slick.css" />
+    <link rel="stylesheet" href="/assets/vendor/slick/slick-theme.css" />
     <!-- Font Awesome -->
     <link
       rel="stylesheet"
-      href="/assets/plugins/font-awesome/css/font-awesome.min.css"
+      href="/assets/vendor/font-awesome/css/font-awesome.min.css"
     />
     <!-- Bootstrap -->
-    <link rel="stylesheet" href="/assets/plugins/bootstrap/bootstrap.min.css" />
+    <link rel="stylesheet" href="/assets/vendor/bootstrap/bootstrap.min.css" />
     <!-- Stylesheets -->
     <link href="/assets/css/style.css" rel="stylesheet" />
 
     <!--Favicon-->
-    <link rel="shortcut icon" href="/assets/images/favicon.ico" type="image/x-icon" />
-    <link rel="icon" href="/assets/images/favicon.png" type="image/x-icon" />
-
+    <link rel="shortcut icon" href="/assets/images/favIcon.png" type="image/x-icon" />
+    <link rel="icon" href="/assets/images/favIcon.png" type="image/x-icon" />
   </head>
 
   <body>
-
-<nav class="navbar navbar-expand-lg site-navigation">
-  <div class="container">
-    <a class="navbar-brand" href="/">
-      <img src="/assets/images/logo.png" alt="logo" />
-    </a>
-    <button
-      class="navbar-toggler"
-      type="button"
-      data-toggle="collapse"
-      data-target="#sitenavbar"
-    >
-      <span class="navbar-toggler-icon"></span>
-    </button>
-  
-    <div class="collapse navbar-collapse" id="sitenavbar">
-      <ul class="navbar-nav ml-auto main-nav">
-        <li class="nav-item">
-          <a class="nav-link" href="/">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/about">About</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/portfolio">Portfolio</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Blog</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link btn btn-sm btn-primary btn-sm-rounded" href="/contact">
-            <span class="btn-area">
-              <span data-text="Get in touch">
-                Get in touch
-              </span>
-            </span>
-          </a>
-        </li>
-      </ul>
-    </div>
-  </div>
-</nav>
-
-  {% block process %}
-
-    {{ content | safe }}
-    
+  {% block navbar %}
+    <nav class="navbar navbar-expand-lg site-navigation">
+      <div class="container">
+        <a class="navbar-brand" href="/">
+          <img src="{{nav.navLogo}}" alt="nav-logo" />
+        </a>
+        <button
+          class="navbar-toggler collapsed"
+          type="button"
+          data-toggle="collapse"
+          data-target="#sitenavbar"
+        >
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="sitenavbar">
+          <ul class="navbar-nav ml-auto main-nav">
+            {% for navLink in nav.navLinks %}
+            <li class="nav-item">
+              {% if navLink == "home" %}
+                <a class="nav-link" href="/">{{navLink | capitalize}}</a>
+              {% else %}
+                <a class="nav-link" href="/{{navLink}}">{{navLink | capitalize}}</a> 
+              {% endif %} 
+            </li>
+            {% endfor %}
+            <li class="nav-item">
+              <a class="nav-link btn btn-sm btn-primary btn-sm-rounded" href="/{{nav.navBtnLink}}">
+                <span class="btn-area">
+                  <span data-text="{{nav.navBtnText}}">
+                    {{nav.navBtnText}}
+                  </span>
+                </span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
   {% endblock %}
 
+  {% block content %}
+    {{content | safe}}
+  {% endblock %}
 
   {% block workTogether %}
-
-  <section class="site-cta">
-    <div class="container">
-      <div class="row">
-        <div class="col-12 text-center">
-          <h1 class="site-cta-title">LET’S WORK TOGETHER</h1>
-          <ul class="site-cta-buttons">
-            <li>
-              <a href="/contact" class="btn btn-secondary">
-                <span class="btn-area">
-                  <span data-text="Submit Query"> Submit Query </span>
-                </span>
-              </a>
-            </li>
-            <li>
-              <a href="#" class="btn btn-primary">
-                <span class="btn-area">
-                  <span data-text="Not Convinced"> Not Convinced </span>
-                </span>
-              </a>
-            </li>
-          </ul>
+    <section class="site-cta">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 text-center">
+            <h1 class="site-cta-title">{{workTogether.heading}}</h1>
+            <ul class="site-cta-buttons">
+              <li>
+                <a href="/{{workTogether.submitBtn.btnLink}}" class="btn btn-secondary">
+                  <span class="btn-area">
+                    <span data-text="{{workTogether.submitBtn.btnText}}">
+                      {{workTogether.submitBtn.btnText}}
+                    </span>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="/{{workTogether.convBtn.btnLink}}" class="btn btn-primary">
+                  <span class="btn-area">
+                    <span data-text="{{workTogether.convBtn.btnText}}">
+                      {{workTogether.convBtn.btnText}}
+                    </span>
+                  </span>
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
-      
+    </section>
   {% endblock %}
 
-<footer class="site-footer">
-  <div class="container">
-    <div class="row">
-      <div class="col-12">
-        <div class="site-footer-logo"><img src="/assets/images/logo-footer.png" alt="logo-footer"></div>
-      </div>
-      <div class="col-lg-3">
-        <div class="site-footer-widget">
-          <h5 class="site-footer-widget-title">Contact Info</h5>
-          <p class="site-footer-widget-description">
-            713 Elmwood St.
-            <br>
-            Prior Lake, MN 55372
-            <br>
-            <a href="tel:409-896-1444">409-896-1444</a>, <a href="tel:409-781-1308">409-781-1308</a>
-            <br>
-            <a href="mailto:">info@roxo.co</a>
-          </p>
+  {% block footer %}
+    <footer class="site-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="site-footer-logo">
+              <a href="/">
+                <img src="{{footer.footerLogo}}" alt="logo-footer">
+              </a>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <div class="site-footer-widget">
+              <h5 class="site-footer-widget-title">Contact Info</h5>
+              <p class="site-footer-widget-description">
+              {% for contactInfo in footer.contactsInfo %}
+                <a href="{{contactInfo.link}}">{{contactInfo.text}}</a>
+                <br>
+              {% endfor %}
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-2 col-md-6">
+            <div class="site-footer-widget">
+              <h5 class="site-footer-widget-title">{{footer.siteMapHeading}}</h5>
+              <ul class="site-footer-widget-links">
+                {% for siteMap in footer.siteMap %}
+                 <li>
+                  <a href="/{{siteMap.link}}">{{siteMap.text}}</a>
+                 </li> 
+                {% endfor %}
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-2 col-md-6">
+            <div class="site-footer-widget">
+              <h5 class="site-footer-widget-title">{{footer.socialHeading}}</h5>
+              <ul class="site-footer-widget-links">
+                {% for socialMedia in footer.socialMedia %}
+                <li><a href="/{{socialMedia.link}}">{{socialMedia.text}}</a></li>
+                {% endfor %}
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <div class="site-footer-widget">
+              <h5 class="site-footer-widget-title">{{footer.brandHeading}}</h5>
+              <p class="site-footer-widget-description">
+              {% for brandMotto in footer.brandMotto %}
+                - {{brandMotto}}
+                <br>
+              {% endfor %}
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-2 col-12">
+            <a href="#top" class="site-footer-widget-top">
+              <img src="{{footer.back2topIcon}}" alt="back-to-top">
+              <p>
+                {{footer.customerComment}}
+              </p>
+            </a>
+          </div>
         </div>
       </div>
-      <div class="col-lg-2">
-        <div class="site-footer-widget">
-          <h5 class="site-footer-widget-title">Sitemap</h5>
-          <ul class="site-footer-widget-links">
-            <li><a href="#">About Comapny</a></li>
-            <li><a href="#">Projects</a></li>
-            <li><a href="#">Design Process</a></li>
-            <li><a href="/contact">Contact</a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="col-lg-2">
-        <div class="site-footer-widget">
-          <h5 class="site-footer-widget-title">Social Media</h5>
-          <ul class="site-footer-widget-links">
-            <li><a href="#">Medium</a></li>
-            <li><a href="#">Behance</a></li>
-            <li><a href="#">Dribbble</a></li>
-            <li><a href="#">Instagram</a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="col-lg-3">
-        <div class="site-footer-widget">
-          <h5 class="site-footer-widget-title">We help brands:</h5>
-          <p class="site-footer-widget-description">
-            develop design solutions
-            <br>
-            produce valuable cultural content
-            <br>
-            create fresh brand experience
-          </p>
-        </div>
-      </div>
-      <div class="col-lg-2">
-        <a href="#top" class="site-footer-widget-top">
-          <img src="/assets/images/to-top.svg" alt="back-to-top">
-          <p>
-            I want to 
-            <br>
-            visit again
-          </p>
-        </a>
-      </div>
-    </div>
-  </div>
-</footer>
-
-<script src="/assets/js/vendor.js"></script>
-<script src="/assets/js/script.js"></script>
-</body>
+    </footer>
+  {% endblock %}
+    <!-- <script src="js/vendor.js"></script> -->
+    <script src="/assets/vendor/jQuery/jquery.min.js"></script>
+    <script src="/assets/vendor/bootstrap/bootstrap.min.js"></script>
+    <script src="/assets/js/script.js"></script>
+  </body>
 </html>
+

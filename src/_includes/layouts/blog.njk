@@ -1,0 +1,54 @@
+{% extends "base.njk" %}
+
+{% block content %}
+
+    <section class="site-blog-header">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-8 text-center">
+            <h1>{{title}}</h1>
+            <p>
+              {{des}}
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="site-blog">
+      <div class="container">
+        <div class="row">
+          {% for blogpost in collections.blogpost %}
+          <div class="col-lg-6">
+            <article class="site-blog-post">
+              <div class="site-blog-post-thumb">
+                <img src="{{blogpost.data.img}}" alt="post-thumb">
+              </div>
+              <div class="site-blog-post-content">
+                <span>{{blogpost.data.postDate}}</span>
+                <h3><a href="{{blogpost.data.page.url}}">{{blogpost.data.title}}</a></h3>
+                <p>
+                  {{blogpost.data.des}}
+                </p>
+                <a href="{{blogpost.data.page.url}}" class="read-more">{{blogpost.data.btnText}}</a>
+              </div>
+            </article>
+          </div>
+          {% endfor %}
+          <div class="col-12">
+            <div class="site-blog-pagination">
+              <nav>
+                <ul class="pagination">
+                  <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                  <li class="page-item"><a class="page-link" href="#">2</a></li>
+                  <li class="page-item"><a class="page-link" href="#">3</a></li>
+                  <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  
+{% endblock %}

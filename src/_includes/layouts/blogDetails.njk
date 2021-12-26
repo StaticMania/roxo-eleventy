@@ -1,0 +1,44 @@
+{% extends "base.njk" %}
+
+{% block content %}
+    <section class="site-blog details">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <article class="site-blog-details">
+              <p><span>{{postDate}}</span> by <span>{{author}}</span></p>
+              <h2 class="blog-title">{{title}}</h2>
+              <img class="feature-image" src="{{featureImg}}" alt="blog-details-image">
+              {{content | safe}}
+            </article>
+            {% if collections.blogpost %}
+            {% set nextPost = collections.blogpost | getNextCollectionItem(page) %}
+            {% set previousPost = collections.blogpost | getPreviousCollectionItem(page) %}
+            <div class="site-project-single-action d-flex justify-content-between mt-5">
+              {% if previousPost%}
+              <a href="{{previousPost.url}}">
+                <img class="rev" src="/assets/images/to-top.svg" alt="next project">
+                <span class="link-area">
+                  <span data-text="{{previousPost.data.title}}">
+                    Previous Project
+                  </span>
+                </span>
+              </a>
+              {% endif %}
+              {% if nextPost %}
+              <a href="{{nextPost.url}}">
+                <span class="link-area">
+                  <span data-text="{{nextPost.data.title}}">
+                    Next Project
+                  </span>
+                </span>
+                <img src="/assets/images/to-top.svg" alt="next project">
+              </a> 
+              {% endif %} 
+            </div>
+            {% endif %}
+          </div>
+        </div>
+      </div>
+    </section>
+{% endblock %}
