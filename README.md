@@ -1,6 +1,6 @@
 # Roxo Eleventy
 
-Roxo Hugo is a digital agency Hugo theme for creative agencies, freelancers, graphic designers, photographers. Can be used for any kind of corporate websites who provides digital services with many expertise such as Design, Digital Products, Development, Campaign & Content, Employer Branding, Animation & Motion Graphics ,Packaging & Product Design, Retail & Spacial, Print & Editorial Design, Concept/Text, Information Design etc. Roxo Hugo’s contact form is supported Formspree.
+Roxo is a digital agency theme for creative agencies, freelancers, graphic designers, photographers. Can be used for any kind of corporate websites who provides digital services with many expertise such as Design, Digital Products, Development, Campaign & Content, Employer Branding, Animation & Motion Graphics ,Packaging & Product Design, Retail & Spacial, Print & Editorial Design, Concept/Text, Information Design etc. Roxo ’s contact form is supported Formspree.
 
 ## Table of Contents
 - [Live Demo](#)
