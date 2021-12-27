@@ -24,7 +24,7 @@
     <section class="site-project" id="project">
         <div class="container">
           <div class="row">
-            {% for portfolio in collections.portfolios %}
+            {% for portfolio in portfolios %}
             <div class="col-lg-6 col-md-10 mx-auto">
               <div class="site-project-item">
                 <div class="site-project-item-thumb">
@@ -33,7 +33,7 @@
                 <div class="site-project-item-content">
                   <span>{{portfolio.data.subTitle}}</span>
                   <h3>{{portfolio.data.title}}</h3>
-                  <a href="{{portfolio.data.page.url}}" class="read-more">{{portfolio.data.linkText}}</a>
+                  <a href="{{portfolio.url}}" class="read-more">{{portfolio.data.linkText}}</a>
                 </div>
               </div>
             </div>
@@ -42,10 +42,19 @@
               <div class="site-project-pagination">
                 <nav>
                   <ul class="pagination">
-                    <li class="page-item active"><a class="page-link" href="#">1</a></li>
-                    <li class="page-item"><a class="page-link" href="#">2</a></li>
-                    <li class="page-item"><a class="page-link" href="#">3</a></li>
-                    <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                    {% if pagination.href.previous %}
+                    <li class="page-item"><a class="page-link" href="{{pagination.href.previous}}">Previous</a></li>
+                    {% endif %}
+                    {% for pageEntry in pagination.hrefs %}
+                    <li {% if page.url == pageEntry %}
+                          class="page-item active"><a class="page-link" href="{{pageEntry}}">{{loop.index}}</a></li>
+                        {% else %}
+                          class="page-item"><a class="page-link" href="{{pageEntry}}">{{loop.index}}</a></li>
+                        {% endif %}
+                    {% endfor %}
+                    {% if pagination.href.next %}
+                    <li class="page-item"><a class="page-link" href="{{pagination.href.next}}">Next</a></li>
+                    {% endif %}
                   </ul>
                 </nav>
               </div>
