@@ -13,7 +13,7 @@
           <div class="col-lg-6 ml-auto">
             <div class="site-contact-form">
               <h4>{{formTitle}}</h4>
-              <form action="#">
+              <form method="POST" action="https://fabform.io/f/ulB_j_f">
                 <div class="row">
                   <div class="col-lg-6">
                     <input type="text" class="form-control" name="first-name" id="first-name" placeholder="First Name">
@@ -37,7 +37,7 @@
                     <textarea class="form-control" id="aboutProject" rows="6" placeholder="About the Project"></textarea>
                   </div>
                   <div class="col-12">
-                    <button type="submit" class="btn btn-primary">
+                    <button type="submit" class="btn btn-primary" formtarget="_blank">
                       <span class="btn-area">
                         <span data-text="{{btnText}}">
                           {{btnText}}
@@ -47,6 +47,9 @@
                   </div>
                 </div>
               </form>
+              <p class="contact-form-generator mt-3">
+                <strong>** </strong><a href="https://fabform.io/" target="_blank">Static website forms</a>
+              </p>
             </div>
           </div>
         </div>
