@@ -1115,5 +1115,15 @@ textarea.form-control {
   .site-footer-copyright a{
     margin-bottom:70px}
 }
+.contact-form-generator {
+  margin-top: 20px;
+}
+ .contact-form-generator   a{
+    color:#F7F9FF;
+    font-size: 13px;
+    text-transform: uppercase;
+    margin-bottom: 50px;
+    letter-spacing: 3px;
+  }
 
 /*# sourceMappingURL=maps/style.css.map */
