@@ -1097,4 +1097,23 @@ textarea.form-control {
 .site-footer-widget-top:hover {
   text-decoration: none;
 }
+.site-footer-copyright p{
+  color:#fff;
+  margin:50px auto 0;
+  text-align:center
+}
+.site-footer-copyright a{
+  color:#00113e;
+  transition:all .3s ease
+}
+@media(max-width:767px){
+  .site-footer-copyright a{
+    font-size:20px
+  }
+}
+@media(max-width:991px){
+  .site-footer-copyright a{
+    margin-bottom:70px}
+}
+
 /*# sourceMappingURL=maps/style.css.map */
