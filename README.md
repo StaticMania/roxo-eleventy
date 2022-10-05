@@ -17,7 +17,7 @@ Checkout the live demo [here](https://roxo-eleventy.staticmania.com/)
 
 ## Installation
 
-1. Add the repository into your Eleventy Project repository by `git clone https://github.com/StaticMania/roxo-eleventy.git`
+1. Add the repository into your Eleventy Project repository by `git clone https://github.com/downupti/roxo-eleventy.git`
 
 2. Install npm dependencies by `npm install`
 
