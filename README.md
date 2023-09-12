@@ -1,6 +1,6 @@
 # Roxo Eleventy
 
-Roxo is a digital agency theme for creative agencies, freelancers, graphic designers, photographers. Can be used for any kind of corporate websites who provides digital services with many expertise such as Design, Digital Products, Development, Campaign & Content, Employer Branding, Animation & Motion Graphics ,Packaging & Product Design, Retail & Spacial, Print & Editorial Design, Concept/Text, Information Design etc. Roxo ’s contact form is supported Formspree.
+Roxo is a digital agency theme for creative agencies, freelancers, graphic designers, photographers. Can be used for any kind of corporate websites who provides digital services with many expertise such as Design, Digital Products, Development, Campaign & Content, Employer Branding, Animation & Motion Graphics ,Packaging & Product Design, Retail & Spacial, Print & Editorial Design, Concept/Text, Information Design etc. Roxo ’s contact form is supported Fabform.io
 
 ## Table of Contents
 
@@ -30,7 +30,7 @@ Checkout the live demo [here](https://roxo-eleventy.staticmania.com/)
 -  Dedicated portfolio and blog page.
 -  Well formatted code.
 -  Easy Customization.
--  FabForm.io[static website form](https://fabform.io)
+-  FabForm.io [form backend service] (https://fabform.io)
 -  Crafted for Design Agency/ Portfolio
 
 ## Support
